@@ -1,0 +1,32 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-title> 
+          <ion-icon name="arrow-round-back" (click)="goback()"></ion-icon> 
+        Payment Done
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<ion-content style="color:green;text-align:center;">
+<br><br>
+<h3  style="color:green;text-align:center;">Payment done succesfully</h3>
+<div class="swal2-icon swal2-success swal2-animate-success-icon" style="display: flex;">
+ <div class="swal2-success-circular-line-left" style="background-color: rgb(255, 255, 255);"></div>
+   <span class="swal2-success-line-tip"></span>
+   <span class="swal2-success-line-long"></span>
+   <div class="swal2-success-ring"></div> 
+   <div class="swal2-success-fix" style="background-color: rgb(255, 255, 255);"></div>
+   <div class="swal2-success-circular-line-right" style="background-color: rgb(255, 255, 255);"></div>
+   
+  </div>
+   
+  <ion-button  color="success" (click)="gotoBooking()">Book Another</ion-button> <br><br>
+  <ion-button  color="warning"  (click)="gotoMovies()">Goto Movies</ion-button>
+  
+</ion-content>
+  
+  

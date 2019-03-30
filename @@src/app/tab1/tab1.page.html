@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Movies
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content style="background: #563ada;">
+
+    <ion-slides pager="true" [options]="slideOpts">
+        <ion-slide>
+          <img src="assets/icon/b1.jpg">
+        </ion-slide>
+        <ion-slide>
+            <img src="assets/icon/b2.jpg">
+        </ion-slide>
+        <ion-slide>
+            <img src="assets/icon/b3.jpg">
+        </ion-slide>
+      </ion-slides>
+
+
+    <ion-grid> 
+        <ion-card *ngFor="let movie of movies">
+            <ion-row> 
+                <ion-col size="3">
+                  <img src="{{movie.image_url}}"/>
+                </ion-col>
+                <ion-col  size="9">
+                  <ion-row>
+                    <ion-col size="8">
+                    <ion-card-title>  {{movie.name}} </ion-card-title>  
+                    <ion-card-subtitle>Rating : {{movie.rating}}</ion-card-subtitle>
+                    <ion-card-subtitle>Year : {{movie.year}}</ion-card-subtitle> 
+                    <ion-badge color="light">{{movie.type}}</ion-badge> &nbsp;&nbsp;&nbsp;&nbsp; <ion-badge color="light">{{movie.language}}</ion-badge>
+                  </ion-col>
+                  <ion-col style="vertical-align:middle;margin-top: 20px;">
+                    <ion-button color="warning"  (click)="gotoLogin()" >Book</ion-button>
+                  </ion-col>
+                  </ion-row>
+                </ion-col> 
+            </ion-row>
+        </ion-card>
+  
+       
+
+        </ion-grid>
+</ion-content>

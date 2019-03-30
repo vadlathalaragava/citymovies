@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+        <!-- <ion-icon name="arrow-round-back" (click)="goback()"></ion-icon>  -->
+     Make your booking
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+<ion-grid>
+	<ion-row justify-content-center>
+		<ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+			<div text-center>
+				<h4>Book Ticket</h4>
+			</div>
+			<div padding>
+				<ion-item>
+					<ion-input type="text" placeholder="Customer Id"></ion-input>
+				</ion-item>
+
+				<ion-item>
+					<ion-input type="text" placeholder="Movie name"></ion-input>
+        </ion-item>
+        
+        <ion-item>
+					<ion-input type="text" placeholder="Number of tickets"></ion-input>
+				</ion-item>
+
+				<ion-item>
+					<ion-input type="text" placeholder="theatre"></ion-input>
+        </ion-item>
+
+        <ion-item>
+					<ion-input type="text" placeholder="screen"></ion-input>
+        </ion-item>
+        
+        <ion-item>
+					<ion-input type="text" placeholder="city"></ion-input>
+        </ion-item>
+
+        <ion-item>
+					<ion-input type="text" placeholder="amount"></ion-input>
+        </ion-item>
+
+			</div>
+
+			<div padding>
+				<ion-button size="large"   expand="block" style="background: #563ada;" (click)="goToHome()">Book Now</ion-button>
+			</div>
+		</ion-col>
+	</ion-row>
+</ion-grid>
+</ion-content>
