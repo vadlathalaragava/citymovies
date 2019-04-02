@@ -7,6 +7,8 @@
       </ion-title>
     </ion-toolbar>
   </ion-header> 
+
+
     <ion-content
     [scrollEvents]="true"
     (ionScrollStart)="logScrollStart()"
@@ -34,7 +36,7 @@
          </div>
    
          <div padding>
-           <ion-button color="light" size="large"  (click)="doLogin()" expand="block"><span  style="color:#563ada;font-weight:bold;">Login</span></ion-button>
+           <ion-button color="light" size="large"  (click)="doLogin(validate)" expand="block"><span  style="color:#563ada;font-weight:bold;">Login</span></ion-button>
          </div> 
    
          <div text-center> 
@@ -74,6 +76,7 @@
    
    
    </ion-grid>
+   </ion-content>
    
  
 

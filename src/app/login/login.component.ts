@@ -25,17 +25,19 @@ export class LoginComponent implements OnInit {
 
     await alert.present();
   }
-  validate:any={};
+  validate={
+    email:'',
+    password:''
+  };
  
 
-  doLogin(){
-    this.customerService.authRemoteCustomer(this.validate).subscribe((customer)=>{
-        this.data = customer;
-        if( typeof(this.data.email)=='string'){
-          this.router.navigate(['/tabs/tab1']);
-        }else{
-          this.presentAlert();
-        }
+  doLogin(validate){
+    console.log('called')
+    this.customerService.authRemoteCustomer(validate).subscribe((result)=>{
+       console.log(result);
+       if(result.password==validate.password){
+        this.router.navigate(['/tabs/tab1']);
+       }
     })
   }
 

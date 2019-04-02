@@ -18,7 +18,7 @@ const routes: Routes = [
   { path: 'films', loadChildren: './films/films.module#FilmsPageModule' },
   { path: 'profile', loadChildren: './profile/profile.module#ProfilePageModule' },
   { path: 'forgetpassword', loadChildren: './forgetpassword/forgetpassword.module#ForgetpasswordPageModule' },
-  { path: 'booking', loadChildren: './booking/booking.module#BookingPageModule' }
+  { path: 'booking/:id', loadChildren: './booking/booking.module#BookingPageModule' }
 ];
 @NgModule({
   imports: [

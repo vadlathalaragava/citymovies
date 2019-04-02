@@ -8,7 +8,9 @@ import { Observable} from 'rxjs';
 })
 export default class CustomerService {
   private customerUrl = 'http://localhost:3000/api/customer/';
-  private authUrl = 'http://localhost:3000/api/authenticate/';
+  
+
+  private loginUrl = 'http://localhost:3000/api/login/';
   
   constructor( private http: HttpClient){}
 customers:any;
@@ -31,7 +33,7 @@ addRemoteCustomer(customer):Observable<any>{
 
 
 authRemoteCustomer(validate):Observable<any>{
-  return this.http.get(this.authUrl + '/' + validate.email + '/' + validate.password);
+  return this.http.post(this.loginUrl,validate);
 }
 
 updateRemoteCustomer(customer):Observable<any>{

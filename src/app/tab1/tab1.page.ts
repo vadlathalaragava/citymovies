@@ -2,14 +2,17 @@ import { Component } from '@angular/core';
 import {Location} from '@angular/common';
 import {Router} from '@angular/router';
 import MovieService from '../movie.service';
-
+import {ActivatedRoute} from '@angular/router';
 @Component({
   selector: 'app-tab1',
   templateUrl: 'tab1.page.html',
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page {
-  constructor(private router:Router,private location:Location,private movieService: MovieService){}
+  constructor(private router:Router,private location:Location,private movieService: MovieService,private activatedRoute:ActivatedRoute){}
+ 
+
+  
   goback(){
     this.location.back();
   }
@@ -43,7 +46,7 @@ export class Tab1Page {
    // this.list = this.customerService.getCustomers();
   }
   
-  bookNow(){
-    this.router.navigate(['/booking']);
+  bookNow(movie){
+    this.router.navigate(['/booking/'+ movie.id]);
   }
 }
