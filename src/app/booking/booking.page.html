@@ -47,7 +47,7 @@
 
                     <ion-item>
                             <ion-label>Tickets</ion-label>
-                            <ion-select   [(ngModel)]="movie.tickets" okText="Okay" cancelText="Dismiss">
+                            <ion-select   [(ngModel)]="my_tickets" okText="Okay" cancelText="Dismiss">
                               <ion-select-option value="1">1</ion-select-option>
                               <ion-select-option value="2">2</ion-select-option>
                               <ion-select-option value="3">3</ion-select-option>
@@ -70,6 +70,10 @@
                                   <ion-select-option value="Mumbai">Mumbai</ion-select-option> 
                                 </ion-select>
                               </ion-item> 
+
+                              <ion-item>
+                                <ion-input type="text"  placeholder="tickets" [(ngModel)]="my_tickets"></ion-input>
+                              </ion-item>
                   </ion-list>
 
 
@@ -85,17 +89,17 @@
                           </ion-item>
                
         <br>
-           <ion-item>
-             <ion-input type="text"  placeholder="300"></ion-input>
+           <!-- <ion-item>
+             <ion-input type="text"  placeholder="300" [(ngModel)]="my_tickets"></ion-input>
            </ion-item>
            <br>
            <ion-item>
              <ion-input type="password"  placeholder="130"></ion-input>
-           </ion-item>
+           </ion-item> -->
         
      </div> 
      <div padding>
-       <ion-button color="light" size="large"  (click)="addBooking(movie,data.tickets)" expand="block"><span  style="color:#563ada;font-weight:bold;">Book Now</span></ion-button>
+       <ion-button color="light" size="large"   (click)="addBooking()" expand="block"><span  style="color:#563ada;font-weight:bold;">Book Now</span></ion-button>
      </div>  
    </ion-col>
  </ion-row> 

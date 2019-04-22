@@ -49,4 +49,7 @@ export class Tab1Page {
   bookNow(movie){
     this.router.navigate(['/booking/'+ movie.id]);
   }
+  goLogin(){
+    this.router.navigate(['/login']);
+  }
 }

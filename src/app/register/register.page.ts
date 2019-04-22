@@ -16,7 +16,7 @@ customer ={name:'',password:'',address:'',email:'',phone:''};
 
   addCustomer(customer){
     this.customerService.addRemoteCustomer(this.customer).subscribe(()=>{
-        this.router.navigate(['/tabs/tab1']);
+        this.router.navigate(['/login']);
     });
   }
 

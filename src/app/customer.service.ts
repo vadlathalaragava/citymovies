@@ -7,7 +7,7 @@ import { Observable} from 'rxjs';
   providedIn: 'root'
 })
 export default class CustomerService {
-  private customerUrl = 'http://localhost:3000/api/customer/';
+  private customerUrl = 'http://localhost:3000/api/customers/';
   
 
   private loginUrl = 'http://localhost:3000/api/login/';

@@ -27,16 +27,16 @@
          </div>
          <div padding>
            <ion-item>
-             <ion-input type="text" [(ngModel)]='validate.email' placeholder="Email"></ion-input>
+             <ion-input type="text" [(ngModel)]='customer.email' placeholder="Email"></ion-input>
            </ion-item>
            <br>
            <ion-item>
-             <ion-input type="password" [(ngModel)]='validate.password' placeholder="Password"></ion-input>
+             <ion-input type="password" [(ngModel)]='customer.password' placeholder="Password"></ion-input>
            </ion-item>
          </div>
    
          <div padding>
-           <ion-button color="light" size="large"  (click)="doLogin(validate)" expand="block"><span  style="color:#563ada;font-weight:bold;">Login</span></ion-button>
+           <ion-button color="light" size="large"  (click)="doLogin(customer)" expand="block"><span  style="color:#563ada;font-weight:bold;">Login</span></ion-button>
          </div> 
    
          <div text-center> 

@@ -10,7 +10,7 @@ const routes: Routes = [
   {path:'payment',component:PaymentComponent},
   {path:'paymentdone',component:PaymentdoneComponent},
   {path:'theatre',component:TheatreComponent},
-  { path: '', redirectTo: 'tabs/tab1', pathMatch: 'full' },
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
 
   { path: '', loadChildren: './tabs/tabs.module#TabsPageModule' },
   { path: 'register', loadChildren: './register/register.module#RegisterPageModule' },
@@ -18,7 +18,8 @@ const routes: Routes = [
   { path: 'films', loadChildren: './films/films.module#FilmsPageModule' },
   { path: 'profile', loadChildren: './profile/profile.module#ProfilePageModule' },
   { path: 'forgetpassword', loadChildren: './forgetpassword/forgetpassword.module#ForgetpasswordPageModule' },
-  { path: 'booking/:id', loadChildren: './booking/booking.module#BookingPageModule' }
+  { path: 'booking/:id', loadChildren: './booking/booking.module#BookingPageModule' },
+
 ];
 @NgModule({
   imports: [
